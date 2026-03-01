@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Intramurals SY 2025-2026</title>
+</head>
+
+<style>
+    body {
+        background-image: url("backgroung.avif");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        background-color: #1b3a4b;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav div {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav span {
+        color: white;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    div {
+        color: white;
+        background-color: #4a7e9a;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding: 5px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .container {
+        max-width: 350px;
+        height: 400px;
+        margin: 70px auto;
+        padding: 0 20px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+</style>
+
+<body>
+
+    <nav>
+        <span>Intramurals SY 2025–2026</span>
+        <div>
+            <a href="index.html">Sign Up Page</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">List of Players</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="div1">
+            <h1>Create Account</h1>
+            <form>
+                <input type="username" id="input1" placeholder="Enter your username"><br>
+                <input type="password" id="input2" placeholder="Enter your password"><br>
+            </form>
+            <div id="output"></div>
+        </div>
+        <input type="button" py-click="password_authenticator" value="Sign up">
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>

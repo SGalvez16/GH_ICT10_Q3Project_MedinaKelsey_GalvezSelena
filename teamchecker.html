@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>  
+    <title>Intramurals Team Checker</title>
+</head>
+<style>
+
+    nav {
+        background-color: #1b3a4b;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav div {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav span {
+        color: white;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        background-image: url("backgroung.avif");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        height: 500px;
+        margin: 30px auto;
+        padding: 0 20px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    div {
+        color: white;
+        background-color: #4a7e9a;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding: 5px;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .div2 {
+        color: white;
+        background-color: #326273;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding: 5px;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .div3 {
+        color: white;
+        background-color: #326273;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding: 5px;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 15px;
+        text-align: center;
+    }
+</style>
+<body>
+    <nav>
+        <span>Intramurals SY 2025–2026</span>
+        <div>
+            <a href="index.html">Sign Up Page</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">List of Players</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="div1">
+            <h1><strong>Team Checker</strong></h1>
+
+            <label>Are you done with online registration?</label><br>
+            Cleared<input type="radio" name="registration" id="body1" value="cleared">
+            Not Cleared<input type="radio" name="registration" id="body2" value="not cleared"><br>
+        </div>
+        <div id="div2">
+            <label>Do you have a medical clearance from the clinic?</label><br>
+            Cleared<input type="radio" name="medical" id="body3" value="cleared">
+            Not Cleared<input type="radio" name="medical" id="body4" value="not cleared">
+        </div>
+        <div id="div3">
+            <label>What's your Grade & Section?</label><br>
+            <select id="level">
+                <option value="">Select your grade level</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+
+            <select id="section">
+                <option value="">Select your grade section</option>
+                <option>Sapphire</option>
+                <option>Ruby</option>
+                <option>Emerald</option>
+                <option>Topaz</option>
+            </select>
+
+        </div>
+        <input type="button" py-click="intrams_qualifications" value="Check">
+    </form>
+            <div id="output"></div>
+    </div>
+
+    <py-script src="main.py"></py-script>    
+</body>
+</html>
